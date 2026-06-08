@@ -17,8 +17,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'cd /root/Mpesa-tracker-webpage && docker compose down || true'
-                sh 'cd /root/Mpesa-tracker-webpage && docker compose up -d'
+                sh 'docker stop mpesa-dashboard || true'
+                sh 'docker rm mpesa-dashboard || true'
+                sh 'docker run -d --name mpesa-dashboard -p 4001:8080 --network n8n-stock-tracker_default --restart unless-stopped mpesa-dashboard'
             }
         }
     }
