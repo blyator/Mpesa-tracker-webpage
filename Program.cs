@@ -18,8 +18,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseStaticFiles();
 app.UsePathBase("/mpesa");
+app.UseStaticFiles();
 app.UseRouting();
 app.MapControllerRoute(
     name: "default",
