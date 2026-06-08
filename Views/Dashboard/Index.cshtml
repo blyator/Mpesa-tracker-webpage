@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/site.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>M-PESA Dashboard</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+
+    <h1 class="text-3xl font-bold text-green-600 mb-8">M-PESA Dashboard</h1>
+
+    <!-- Categories -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Categories</h2>
+        <div class="grid grid-cols-2 gap-4">
+            @foreach (var cat in ViewBag.Categories)
+            {
+                <div class="bg-white rounded-lg shadow p-4">
+                    <p class="text-gray-500 text-sm uppercase">@cat.category</p>
+                    <p class="text-2xl font-bold text-gray-800">KES @cat.total</p>
+                    <p class="text-gray-400 text-sm">@cat.count transactions</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Recent Transactions -->
+    <div>
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Recent Transactions</h2>
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+            <table class="w-full text-sm">
+                <thead class="bg-green-600 text-white">
+                    <tr>
+                        <th class="p-3 text-left">Date</th>
+                        <th class="p-3 text-left">Type</th>
+                        <th class="p-3 text-left">Amount</th>
+                        <th class="p-3 text-left">Category</th>
+                        <th class="p-3 text-left">Direction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var tx in ViewBag.Transactions)
+                    {
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3 text-gray-600">@tx.parsed_date</td>
+                            <td class="p-3 text-gray-800">@tx.type</td>
+                            <td class="p-3 font-semibold @(tx.direction == "in" ? "text-green-600" : "text-red-500")">
+                                KES @tx.amount
+                            </td>
+                            <td class="p-3 text-gray-600">@tx.category</td>
+                            <td class="p-3">
+                                <span class="px-2 py-1 rounded-full text-xs @(tx.direction == "in" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700")">
+                                    @tx.direction
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
