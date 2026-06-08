@@ -9,13 +9,6 @@ pipeline {
             }
         }
 
-        stage('Build CSS') {
-            steps {
-                sh 'npm install'
-                sh 'npx tailwindcss -i ./wwwroot/css/input.css -o ./wwwroot/css/site.css'
-            }
-        }
-
         stage('Build Image') {
             steps {
                 sh 'docker build -t mpesa-dashboard .'
@@ -24,8 +17,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'docker compose down || true'
-                sh 'docker compose up -d'
+                sh 'cd /root/Mpesa-tracker-webpage && docker compose down || true'
+                sh 'cd /root/Mpesa-tracker-webpage && docker compose up -d'
             }
         }
     }
