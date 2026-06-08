@@ -1,0 +1,75 @@
+## Visual Studio / .NET
+## Ignore build outputs and user-specific files
+bin/
+obj/
+Debug/
+Release/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+.idea/
+
+## NuGet
+*.nupkg
+.packages/
+/.nuget/
+artifacts/
+
+## Publish outputs
+publish/
+*.Publish.xml
+
+## Build artifacts
+*.dll
+*.exe
+*.pdb
+*.ilk
+
+## Logs
+*.log
+
+## ASP.NET / app files
+App_Data/
+appsettings.Development.json
+appsettings.Development.*.json
+secrets.json
+
+## WWW build outputs (Tailwind / bundlers)
+wwwroot/css/site.css
+wwwroot/css/*.map
+dist/
+build/
+
+## Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+## Tailwind / cache
+.tailwindcache
+.tailwind
+
+## Environment
+.env
+.env.*
+
+## IDE / Editor
+*.sublime-workspace
+*.sublime-project
+*.iml
+.idea/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Databases
+*.db
+*.sqlite
+*.sqlite3
