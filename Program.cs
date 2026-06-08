@@ -19,8 +19,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
+app.UsePathBase("/mpesa");
 app.UseRouting();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Dashboard}/{action=Index}/{id?}"
