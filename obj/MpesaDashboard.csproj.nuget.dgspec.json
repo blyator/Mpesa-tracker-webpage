@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/vaptech/Billy/MpesaDashboard/MpesaDashboard.csproj": {}
+  },
+  "projects": {
+    "/home/vaptech/Billy/MpesaDashboard/MpesaDashboard.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/vaptech/Billy/MpesaDashboard/MpesaDashboard.csproj",
+        "projectName": "MpesaDashboard",
+        "projectPath": "/home/vaptech/Billy/MpesaDashboard/MpesaDashboard.csproj",
+        "packagesPath": "/home/vaptech/.nuget/packages/",
+        "outputPath": "/home/vaptech/Billy/MpesaDashboard/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/vaptech/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/home/vaptech/local-nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.79, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.24, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "Npgsql.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

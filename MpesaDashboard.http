@@ -1,0 +1,6 @@
+@MpesaDashboard_HostAddress = http://localhost:5044
+
+GET {{MpesaDashboard_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
